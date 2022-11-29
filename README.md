@@ -19,3 +19,5 @@ Inside the `src` directory there are the following  collections:
 * `np-dimers-dumbbells` - Nested sampling simulations of nanoparticle dumbbells.
 * `ns-replica-exchange` - experimental implementations of Nested Sampling replicas incorporating elements of Replica Exchange methods.
 * `ns-test-area-method` - experimental implementations of Nested Sampling combined with the Test Area Method.
+
+The codes were typically compiled using the GNU compiler. Many include suggested compiler commands in the initial comments. **Note:** most codes likely won't compile as is now. They typically reference the custom class files using paths on the file system I was using at the time. Many also use an external implementation of a Fast Mersenne Twister random number generator that was stored locally too. There may also need to be some other adjustements to get them compile ready. 
