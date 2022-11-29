@@ -1,0 +1,288 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 24.21     17.40    17.40 314601300     0.00     0.00  pbc(long double&, long double&, long double&, double, double, double)
+ 18.38     30.60    13.20 236874300     0.00     0.00  PairEnergyES(AtomMD const&, AtomMD const&, long double, long double, long double)
+ 12.38     39.49     8.89 244731240     0.00     0.00  pbc(double&, double&, double&, double, double, double)
+ 10.52     47.05     7.56 1677997620     0.00     0.00  pbc_int(double)
+  8.91     53.45     6.40    10001     0.64     1.86  ForceCalculation(Frame&)
+  7.31     58.70     5.25 77727000     0.00     0.00  PairForceES(AtomMD const&, AtomMD const&, long double, long double, long double, long double*)
+  5.74     62.82     4.12 124253891     0.00     0.00  exp7(long double)
+  4.79     66.27     3.44                             gauss(MTRandomNum&, double)
+  3.17     68.55     2.28                             TotalEnergyES(Frame const&)
+  2.10     70.06     1.51                             AddBiasingForceES(Frame const&, long double, long double, long double)
+  1.49     71.13     1.07 15601560     0.00     0.00  RDistMinImage(Atom const&, Atom const&, long double, long double, long double)
+  0.29     71.34     0.21                             ZeroVelocityFire(Frame&)
+  0.28     71.54     0.20                             DeltaEtwo(Config const&, unsigned int const&, long double const&, long double const&, long double const&, Config const&)
+  0.15     71.65     0.11                             LocalDensity(Config const&)
+  0.12     71.73     0.09    10000     0.01     1.87  verlet(Frame&, Frame&, double)
+  0.10     71.80     0.07    10000     0.01     0.01  correct(Frame&)
+  0.06     71.84     0.04                             LocalDensityTwo(Config const&, Config const&)
+  0.01     71.85     0.01    10000     0.00     0.00  ScaleVelocityFire(Frame&, long double)
+  0.01     71.86     0.01        7     1.43     1.86  printlog(Frame&, int)
+  0.01     71.87     0.01                             RDist(Atom const&, Atom const&)
+  0.00     71.87     0.00    10000     0.00     0.00  CalcP(Frame&)
+  0.00     71.87     0.00     6680     0.00     0.00  PairEnergy(Atom const&, Atom const&, long double, long double, long double)
+  0.00     71.87     0.00     1560     0.00     0.00  PairEnergyES(Atom const&, Atom const&, long double, long double, long double)
+  0.00     71.87     0.00       71     0.00     0.04  PotentialEnergy(Frame&)
+  0.00     71.87     0.00       71     0.00     0.00  kinetic(Frame&)
+  0.00     71.87     0.00        3     0.00     0.00  char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
+  0.00     71.87     0.00        1     0.00     0.00  _GLOBAL__sub_I_dsfmt_global_data
+  0.00     71.87     0.00        1     0.00     0.00  frame_dummy
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.01% of 71.87 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     50.0    2.28   33.62                 TotalEnergyES(Frame const&) [1]
+               13.20   20.42 236874300/236874300     PairEnergyES(AtomMD const&, AtomMD const&, long double, long double, long double) [2]
+-----------------------------------------------
+               13.20   20.42 236874300/236874300     TotalEnergyES(Frame const&) [1]
+[2]     46.8   13.20   20.42 236874300         PairEnergyES(AtomMD const&, AtomMD const&, long double, long double, long double) [2]
+               13.10    3.20 236874300/314601300     pbc(long double&, long double&, long double&, double, double, double) [3]
+                4.12    0.00 124253891/124253891     exp7(long double) [11]
+-----------------------------------------------
+                4.30    1.05 77727000/314601300     PairForceES(AtomMD const&, AtomMD const&, long double, long double, long double, long double*) [9]
+               13.10    3.20 236874300/314601300     PairEnergyES(AtomMD const&, AtomMD const&, long double, long double, long double) [2]
+[3]     30.1   17.40    4.25 314601300         pbc(long double&, long double&, long double&, double, double, double) [3]
+                4.25    0.00 943803900/1677997620     pbc_int(double) [10]
+-----------------------------------------------
+                                                 <spontaneous>
+[4]     26.1    0.00   18.78                 FIREmin(Frame&) [4]
+                0.09   18.60   10000/10000       verlet(Frame&, Frame&, double) [5]
+                0.07    0.00   10000/10000       correct(Frame&) [18]
+                0.01    0.00       7/7           printlog(Frame&, int) [19]
+                0.01    0.00   10000/10000       ScaleVelocityFire(Frame&, long double) [20]
+                0.00    0.00       1/10001       ForceCalculation(Frame&) [6]
+                0.00    0.00   10000/10000       CalcP(Frame&) [39]
+-----------------------------------------------
+                0.09   18.60   10000/10000       FIREmin(Frame&) [4]
+[5]     26.0    0.09   18.60   10000         verlet(Frame&, Frame&, double) [5]
+                6.40   12.20   10000/10001       ForceCalculation(Frame&) [6]
+-----------------------------------------------
+                0.00    0.00       1/10001       FIREmin(Frame&) [4]
+                6.40   12.20   10000/10001       verlet(Frame&, Frame&, double) [5]
+[6]     25.9    6.40   12.20   10001         ForceCalculation(Frame&) [6]
+                8.89    3.31 244671180/244731240     pbc(double&, double&, double&, double, double, double) [7]
+-----------------------------------------------
+                0.00    0.00   60060/244731240     PotentialEnergy(Frame&) [22]
+                8.89    3.31 244671180/244731240     ForceCalculation(Frame&) [6]
+[7]     17.0    8.89    3.31 244731240         pbc(double&, double&, double&, double, double, double) [7]
+                3.31    0.00 734193720/1677997620     pbc_int(double) [10]
+-----------------------------------------------
+                                                 <spontaneous>
+[8]     16.8    1.51   10.60                 AddBiasingForceES(Frame const&, long double, long double, long double) [8]
+                5.25    5.35 77727000/77727000     PairForceES(AtomMD const&, AtomMD const&, long double, long double, long double, long double*) [9]
+-----------------------------------------------
+                5.25    5.35 77727000/77727000     AddBiasingForceES(Frame const&, long double, long double, long double) [8]
+[9]     14.7    5.25    5.35 77727000         PairForceES(AtomMD const&, AtomMD const&, long double, long double, long double, long double*) [9]
+                4.30    1.05 77727000/314601300     pbc(long double&, long double&, long double&, double, double, double) [3]
+-----------------------------------------------
+                3.31    0.00 734193720/1677997620     pbc(double&, double&, double&, double, double, double) [7]
+                4.25    0.00 943803900/1677997620     pbc(long double&, long double&, long double&, double, double, double) [3]
+[10]    10.5    7.56    0.00 1677997620         pbc_int(double) [10]
+-----------------------------------------------
+                4.12    0.00 124253891/124253891     PairEnergyES(AtomMD const&, AtomMD const&, long double, long double, long double) [2]
+[11]     5.7    4.12    0.00 124253891         exp7(long double) [11]
+-----------------------------------------------
+                                                 <spontaneous>
+[12]     4.8    3.44    0.00                 gauss(MTRandomNum&, double) [12]
+-----------------------------------------------
+                0.52    0.00 7600760/15601560     LocalDensity(Config const&) [14]
+                0.55    0.00 8000800/15601560     LocalDensityTwo(Config const&, Config const&) [15]
+[13]     1.5    1.07    0.00 15601560         RDistMinImage(Atom const&, Atom const&, long double, long double, long double) [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[14]     0.9    0.11    0.52                 LocalDensity(Config const&) [14]
+                0.52    0.00 7600760/15601560     RDistMinImage(Atom const&, Atom const&, long double, long double, long double) [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[15]     0.8    0.04    0.55                 LocalDensityTwo(Config const&, Config const&) [15]
+                0.55    0.00 8000800/15601560     RDistMinImage(Atom const&, Atom const&, long double, long double, long double) [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[16]     0.3    0.21    0.00                 ZeroVelocityFire(Frame&) [16]
+-----------------------------------------------
+                                                 <spontaneous>
+[17]     0.3    0.20    0.00                 DeltaEtwo(Config const&, unsigned int const&, long double const&, long double const&, long double const&, Config const&) [17]
+-----------------------------------------------
+                0.07    0.00   10000/10000       FIREmin(Frame&) [4]
+[18]     0.1    0.07    0.00   10000         correct(Frame&) [18]
+-----------------------------------------------
+                0.01    0.00       7/7           FIREmin(Frame&) [4]
+[19]     0.0    0.01    0.00       7         printlog(Frame&, int) [19]
+                0.00    0.00      71/71          PotentialEnergy(Frame&) [22]
+                0.00    0.00      71/71          kinetic(Frame&) [42]
+-----------------------------------------------
+                0.01    0.00   10000/10000       FIREmin(Frame&) [4]
+[20]     0.0    0.01    0.00   10000         ScaleVelocityFire(Frame&, long double) [20]
+-----------------------------------------------
+                                                 <spontaneous>
+[21]     0.0    0.01    0.00                 RDist(Atom const&, Atom const&) [21]
+-----------------------------------------------
+                0.00    0.00      71/71          printlog(Frame&, int) [19]
+[22]     0.0    0.00    0.00      71         PotentialEnergy(Frame&) [22]
+                0.00    0.00   60060/244731240     pbc(double&, double&, double&, double, double, double) [7]
+-----------------------------------------------
+                0.00    0.00       1/1           dsfmt_chk_init_gen_rand [28]
+[23]     0.0    0.00    0.00       1         frame_dummy [23]
+-----------------------------------------------
+                0.00    0.00   10000/10000       FIREmin(Frame&) [4]
+[39]     0.0    0.00    0.00   10000         CalcP(Frame&) [39]
+-----------------------------------------------
+                0.00    0.00    2280/6680        TotalEnergy(Config const&) [48]
+                0.00    0.00    4400/6680        TotalEnergyTwo(Config const&, Config const&) [51]
+[40]     0.0    0.00    0.00    6680         PairEnergy(Atom const&, Atom const&, long double, long double, long double) [40]
+-----------------------------------------------
+                0.00    0.00     760/1560        TotalEnergyES(Config const&) [50]
+                0.00    0.00     800/1560        TotalEnergyTwoES(Config const&, Config const&) [52]
+[41]     0.0    0.00    0.00    1560         PairEnergyES(Atom const&, Atom const&, long double, long double, long double) [41]
+-----------------------------------------------
+                0.00    0.00      71/71          printlog(Frame&, int) [19]
+[42]     0.0    0.00    0.00      71         kinetic(Frame&) [42]
+-----------------------------------------------
+                0.00    0.00       3/3           itos(int) [54]
+[43]     0.0    0.00    0.00       3         char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag) [43]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [77]
+[44]     0.0    0.00    0.00       1         _GLOBAL__sub_I_dsfmt_global_data [44]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [44] _GLOBAL__sub_I_dsfmt_global_data [6] ForceCalculation(Frame&) [5] verlet(Frame&, Frame&, double)
+  [40] PairEnergy(Atom const&, Atom const&, long double, long double, long double) [16] ZeroVelocityFire(Frame&) [18] correct(Frame&)
+   [9] PairForceES(AtomMD const&, AtomMD const&, long double, long double, long double, long double*) [8] AddBiasingForceES(Frame const&, long double, long double, long double) [42] kinetic(Frame&)
+  [14] LocalDensity(Config const&) [20] ScaleVelocityFire(Frame&, long double) [10] pbc_int(double)
+  [41] PairEnergyES(Atom const&, Atom const&, long double, long double, long double) [7] pbc(double&, double&, double&, double, double, double) [19] printlog(Frame&, int)
+   [2] PairEnergyES(AtomMD const&, AtomMD const&, long double, long double, long double) [3] pbc(long double&, long double&, long double&, double, double, double) [17] DeltaEtwo(Config const&, unsigned int const&, long double const&, long double const&, long double const&, Config const&)
+  [13] RDistMinImage(Atom const&, Atom const&, long double, long double, long double) [11] exp7(long double) [43] char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
+   [1] TotalEnergyES(Frame const&) [39] CalcP(Frame&)     [23] frame_dummy
+  [15] LocalDensityTwo(Config const&, Config const&) [21] RDist(Atom const&, Atom const&)
+  [22] PotentialEnergy(Frame&) [12] gauss(MTRandomNum&, double)
