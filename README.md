@@ -5,7 +5,7 @@ This archived repository contains various codes for Nested Sampling simulations 
   * Isobaric Nested Sampling (IBNS): Wilson et al. (2015) Nested sampling of isobaric phase space for the direct evaluation of the isothermal-isobaric partition function of atomic systems, J. Chem. Phys., 143, 154108; https://doi.org/10.1063/1.4933309
   * Coupling Parameter Path Nested Sampling (CPPNS): Wilson et al. (2018) Computing free energies using nested sampling-based approaches, Molecular Simulation, 44:13-14, 1108-1123; https://doi.org/10.1080/08927022.2017.1416113
 
-Some cases include corresponding Metropolis Monte Carlo implementations that were used for comparison/validation. There are also many codes from unpublished work or which encode experimental nested sampling implementations. The codes were developed as a part of my research and training as a Ph.D. Student at UT Dallas (sometime between 2012 and 2016).
+Some cases include corresponding Metropolis Monte Carlo implementations that were used for comparison/validation. There are also many codes from unpublished work or which encode experimental nested sampling implementations. The codes were developed as a part of my research and training as a Ph.D. Student at UT Dallas (sometime between 2012 and 2016, and before I learned about version control with git/GitHub).
 
 ## Implementations
 
@@ -20,4 +20,6 @@ Inside the `src` directory there are the following  collections:
 * `ns-replica-exchange` - experimental implementations of Nested Sampling replicas incorporating elements of Replica Exchange methods.
 * `ns-test-area-method` - experimental implementations of Nested Sampling combined with the Test Area Method.
 
-The codes were typically compiled using the GNU compiler. Many include suggested compiler commands in the initial comments. **Note:** most codes likely won't compile as is now. They typically reference the custom class files using paths on the file system I was using at the time. Many also use an external implementation of a Fast Mersenne Twister random number generator that was stored locally too. There may also need to be some other adjustements to get them compile ready. 
+The codes were typically compiled using the GNU compiler. Many include suggested compiler commands in the initial comments.
+
+**Note:** most codes likely won't compile as is now. They typically reference the custom class files using paths on the file system I was using at the time. Many also use an external implementation of a Fast Mersenne Twister random number generator that was stored locally too. There may also need to be some other adjustements to get them compile ready.
